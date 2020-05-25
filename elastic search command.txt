@@ -1,0 +1,271 @@
+{
+  "took" : 804,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 7,
+    "successful" : 7,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 5832,
+      "relation" : "eq"
+    },
+    "max_score" : 1.0,
+    "hits" : [
+      {
+        "_index" : ".kibana_1",
+        "_type" : "_doc",
+        "_id" : "space:default",
+        "_score" : 1.0,
+        "_source" : {
+          "space" : {
+            "name" : "Default",
+            "description" : "This is your default space!",
+            "color" : "#00bfb3",
+            "disabledFeatures" : [ ],
+            "_reserved" : true
+          },
+          "type" : "space",
+          "migrationVersion" : {
+            "space" : "6.6.0"
+          },
+          "updated_at" : "2020-05-22T12:38:12.192Z"
+        }
+      },
+      {
+        "_index" : ".kibana_1",
+        "_type" : "_doc",
+        "_id" : "maps-telemetry:maps-telemetry",
+        "_score" : 1.0,
+        "_source" : {
+          "maps-telemetry" : {
+            "mapsTotalCount" : 0,
+            "timeCaptured" : "2020-05-22T12:38:21.392Z",
+            "attributesPerMap" : {
+              "dataSourcesCount" : {
+                "min" : 0,
+                "max" : 0,
+                "avg" : 0
+              },
+              "layersCount" : {
+                "min" : 0,
+                "max" : 0,
+                "avg" : 0
+              },
+              "layerTypesCount" : { },
+              "emsVectorLayersCount" : { }
+            }
+          },
+          "type" : "maps-telemetry",
+          "updated_at" : "2020-05-22T12:38:21.392Z"
+        }
+      },
+      {
+        "_index" : ".kibana_1",
+        "_type" : "_doc",
+        "_id" : "ui-metric:Kibana_home:welcomeScreenMount",
+        "_score" : 1.0,
+        "_source" : {
+          "ui-metric" : {
+            "count" : 1
+          },
+          "type" : "ui-metric",
+          "updated_at" : "2020-05-22T12:44:25.116Z"
+        }
+      },
+      {
+        "_index" : ".kibana_1",
+        "_type" : "_doc",
+        "_id" : "ui-metric:Kibana_home:sampleDataConfirm",
+        "_score" : 1.0,
+        "_source" : {
+          "ui-metric" : {
+            "count" : 1
+          },
+          "type" : "ui-metric",
+          "updated_at" : "2020-05-22T12:44:35.969Z"
+        }
+      },
+      {
+        "_index" : ".kibana_1",
+        "_type" : "_doc",
+        "_id" : "visualization:37cc8650-b882-11e8-a6d9-e546fe2bba5f",
+        "_score" : 1.0,
+        "_source" : {
+          "visualization" : {
+            "title" : "[eCommerce] Sales by Category",
+            "visState" : """{"title":"[eCommerce] Sales by Category","type":"area","params":{"type":"area","grid":{"categoryLines":false,"style":{"color":"#eee"}},"categoryAxes":[{"id":"CategoryAxis-1","type":"category","position":"bottom","show":true,"style":{},"scale":{"type":"linear"},"labels":{"show":true,"truncate":100},"title":{}}],"valueAxes":[{"id":"ValueAxis-1","name":"LeftAxis-1","type":"value","position":"left","show":true,"style":{},"scale":{"type":"linear","mode":"normal"},"labels":{"show":true,"rotate":0,"filter":false,"truncate":100},"title":{"text":"Sum of total_quantity"}}],"seriesParams":[{"show":"true","type":"area","mode":"stacked","data":{"label":"Sum of total_quantity","id":"1"},"drawLinesBetweenPoints":true,"showCircles":true,"interpolate":"linear","valueAxis":"ValueAxis-1"}],"addTooltip":true,"addLegend":true,"legendPosition":"top","times":[],"addTimeMarker":false},"aggs":[{"id":"1","enabled":true,"type":"sum","schema":"metric","params":{"field":"total_quantity"}},{"id":"2","enabled":true,"type":"date_histogram","schema":"segment","params":{"field":"order_date","interval":"auto","drop_partials":false,"min_doc_count":1,"extended_bounds":{}}},{"id":"3","enabled":true,"type":"terms","schema":"group","params":{"field":"category.keyword","size":5,"order":"desc","orderBy":"1","otherBucket":false,"otherBucketLabel":"Other","missingBucket":false,"missingBucketLabel":"Missing"}}]}""",
+            "uiStateJSON" : "{}",
+            "description" : "",
+            "version" : 1,
+            "kibanaSavedObjectMeta" : {
+              "searchSourceJSON" : """{"query":{"query":"","language":"kuery"},"filter":[],"indexRefName":"kibanaSavedObjectMeta.searchSourceJSON.index"}"""
+            }
+          },
+          "type" : "visualization",
+          "references" : [
+            {
+              "name" : "kibanaSavedObjectMeta.searchSourceJSON.index",
+              "type" : "index-pattern",
+              "id" : "ff959d40-b880-11e8-a6d9-e546fe2bba5f"
+            }
+          ],
+          "migrationVersion" : {
+            "visualization" : "7.3.1"
+          },
+          "updated_at" : "2020-05-22T12:45:15.285Z"
+        }
+      },
+      {
+        "_index" : ".kibana_1",
+        "_type" : "_doc",
+        "_id" : "visualization:ed8436b0-b88b-11e8-a6d9-e546fe2bba5f",
+        "_score" : 1.0,
+        "_source" : {
+          "visualization" : {
+            "title" : "[eCommerce] Sales by Gender",
+            "visState" : """{"title":"[eCommerce] Sales by Gender","type":"pie","params":{"type":"pie","addTooltip":true,"addLegend":true,"legendPosition":"right","isDonut":true,"labels":{"show":true,"values":true,"last_level":true,"truncate":100}},"aggs":[{"id":"1","enabled":true,"type":"count","schema":"metric","params":{}},{"id":"2","enabled":true,"type":"terms","schema":"segment","params":{"field":"customer_gender","size":5,"order":"desc","orderBy":"1","otherBucket":false,"otherBucketLabel":"Other","missingBucket":false,"missingBucketLabel":"Missing"}}]}""",
+            "uiStateJSON" : "{}",
+            "description" : "",
+            "version" : 1,
+            "kibanaSavedObjectMeta" : {
+              "searchSourceJSON" : """{"query":{"query":"","language":"kuery"},"filter":[],"indexRefName":"kibanaSavedObjectMeta.searchSourceJSON.index"}"""
+            }
+          },
+          "type" : "visualization",
+          "references" : [
+            {
+              "name" : "kibanaSavedObjectMeta.searchSourceJSON.index",
+              "type" : "index-pattern",
+              "id" : "ff959d40-b880-11e8-a6d9-e546fe2bba5f"
+            }
+          ],
+          "migrationVersion" : {
+            "visualization" : "7.3.1"
+          },
+          "updated_at" : "2020-05-22T12:45:15.285Z"
+        }
+      },
+      {
+        "_index" : ".kibana_1",
+        "_type" : "_doc",
+        "_id" : "visualization:09ffee60-b88c-11e8-a6d9-e546fe2bba5f",
+        "_score" : 1.0,
+        "_source" : {
+          "visualization" : {
+            "title" : "[eCommerce] Markdown",
+            "visState" : """{"title":"[eCommerce] Markdown","type":"markdown","params":{"fontSize":12,"openLinksInNewTab":false,"markdown":"### Sample eCommerce Data\nThis dashboard contains sample data for you to play with. You can view it, search it, and interact with the visualizations. For more information about Kibana, check our [docs](https://www.elastic.co/guide/en/kibana/current/index.html)."},"aggs":[]}""",
+            "uiStateJSON" : "{}",
+            "description" : "",
+            "version" : 1,
+            "kibanaSavedObjectMeta" : {
+              "searchSourceJSON" : """{"query":{"query":"","language":"kuery"},"filter":[]}"""
+            }
+          },
+          "type" : "visualization",
+          "references" : [ ],
+          "migrationVersion" : {
+            "visualization" : "7.3.1"
+          },
+          "updated_at" : "2020-05-22T12:45:15.285Z"
+        }
+      },
+      {
+        "_index" : ".kibana_1",
+        "_type" : "_doc",
+        "_id" : "visualization:1c389590-b88d-11e8-a6d9-e546fe2bba5f",
+        "_score" : 1.0,
+        "_source" : {
+          "visualization" : {
+            "title" : "[eCommerce] Controls",
+            "visState" : """{"title":"[eCommerce] Controls","type":"input_control_vis","params":{"controls":[{"id":"1536977437774","fieldName":"manufacturer.keyword","parent":"","label":"Manufacturer","type":"list","options":{"type":"terms","multiselect":true,"dynamicOptions":true,"size":5,"order":"desc"},"indexPatternRefName":"control_0_index_pattern"},{"id":"1536977465554","fieldName":"category.keyword","parent":"","label":"Category","type":"list","options":{"type":"terms","multiselect":true,"dynamicOptions":true,"size":5,"order":"desc"},"indexPatternRefName":"control_1_index_pattern"},{"id":"1536977596163","fieldName":"total_quantity","parent":"","label":"Quantity","type":"range","options":{"decimalPlaces":0,"step":1},"indexPatternRefName":"control_2_index_pattern"}],"updateFiltersOnChange":false,"useTimeFilter":true,"pinFilters":false},"aggs":[]}""",
+            "uiStateJSON" : "{}",
+            "description" : "",
+            "version" : 1,
+            "kibanaSavedObjectMeta" : {
+              "searchSourceJSON" : """{"query":{"query":"","language":"kuery"},"filter":[]}"""
+            }
+          },
+          "type" : "visualization",
+          "references" : [
+            {
+              "name" : "control_0_index_pattern",
+              "type" : "index-pattern",
+              "id" : "ff959d40-b880-11e8-a6d9-e546fe2bba5f"
+            },
+            {
+              "name" : "control_1_index_pattern",
+              "type" : "index-pattern",
+              "id" : "ff959d40-b880-11e8-a6d9-e546fe2bba5f"
+            },
+            {
+              "name" : "control_2_index_pattern",
+              "type" : "index-pattern",
+              "id" : "ff959d40-b880-11e8-a6d9-e546fe2bba5f"
+            }
+          ],
+          "migrationVersion" : {
+            "visualization" : "7.3.1"
+          },
+          "updated_at" : "2020-05-22T12:45:15.285Z"
+        }
+      },
+      {
+        "_index" : ".kibana_1",
+        "_type" : "_doc",
+        "_id" : "visualization:45e07720-b890-11e8-a6d9-e546fe2bba5f",
+        "_score" : 1.0,
+        "_source" : {
+          "visualization" : {
+            "title" : "[eCommerce] Promotion Tracking",
+            "visState" : """{"title":"[eCommerce] Promotion Tracking","type":"metrics","params":{"id":"61ca57f0-469d-11e7-af02-69e470af7417","type":"timeseries","series":[{"id":"ea20ae70-b88d-11e8-a451-f37365e9f268","color":"rgba(240,138,217,1)","split_mode":"everything","metrics":[{"id":"ea20ae71-b88d-11e8-a451-f37365e9f268","type":"sum","field":"taxful_total_price"}],"separate_axis":0,"axis_position":"right","formatter":"number","chart_type":"line","line_width":1,"point_size":1,"fill":"0.7","stacked":"none","filter":{"query":"products.product_name:*trouser*","language":"lucene"},"label":"Revenue Trousers","value_template":"${{value}}"},{"id":"062d77b0-b88e-11e8-a451-f37365e9f268","color":"rgba(191,240,129,1)","split_mode":"everything","metrics":[{"id":"062d77b1-b88e-11e8-a451-f37365e9f268","type":"sum","field":"taxful_total_price"}],"separate_axis":0,"axis_position":"right","formatter":"number","chart_type":"line","line_width":1,"point_size":1,"fill":"0.7","stacked":"none","filter":{"query":"products.product_name:*watch*","language":"lucene"},"label":"Revenue Watches","value_template":"${{value}}"},{"id":"61ca57f1-469d-11e7-af02-69e470af7417","color":"rgba(23,233,230,1)","split_mode":"everything","metrics":[{"id":"61ca57f2-469d-11e7-af02-69e470af7417","type":"sum","field":"taxful_total_price"}],"separate_axis":0,"axis_position":"right","formatter":"number","chart_type":"line","line_width":1,"point_size":1,"fill":"0.7","stacked":"none","filter":{"query":"products.product_name:*bag*","language":"lucene"},"label":"Revenue Bags","value_template":"${{value}}"},{"id":"faa2c170-b88d-11e8-a451-f37365e9f268","color":"rgba(235,186,180,1)","split_mode":"everything","metrics":[{"id":"faa2c171-b88d-11e8-a451-f37365e9f268","type":"sum","field":"taxful_total_price"}],"separate_axis":0,"axis_position":"right","formatter":"number","chart_type":"line","line_width":1,"point_size":1,"fill":"0.7","stacked":"none","filter":{"query":"products.product_name:*cocktail dress*","language":"lucene"},"label":"Revenue Cocktail Dresses","value_template":"${{value}}"}],"time_field":"order_date","index_pattern":"kibana_sample_data_ecommerce","interval":">=12h","axis_position":"left","axis_formatter":"number","axis_scale":"normal","show_legend":1,"show_grid":1,"legend_position":"bottom","annotations":[{"fields":"taxful_total_price","template":"Ring the bell! ${{taxful_total_price}}","index_pattern":"kibana_sample_data_ecommerce","query_string":{"query":"taxful_total_price:>250","language":"lucene"},"id":"c8c30be0-b88f-11e8-a451-f37365e9f268","color":"rgba(25,77,51,1)","time_field":"order_date","icon":"fa-bell","ignore_global_filters":1,"ignore_panel_filters":1}]},"aggs":[]}""",
+            "uiStateJSON" : "{}",
+            "description" : "",
+            "version" : 1,
+            "kibanaSavedObjectMeta" : {
+              "searchSourceJSON" : """{"query":{"query":"","language":"kuery"},"filter":[]}"""
+            }
+          },
+          "type" : "visualization",
+          "references" : [ ],
+          "migrationVersion" : {
+            "visualization" : "7.3.1"
+          },
+          "updated_at" : "2020-05-22T12:45:15.285Z"
+        }
+      },
+      {
+        "_index" : ".kibana_1",
+        "_type" : "_doc",
+        "_id" : "visualization:10f1a240-b891-11e8-a6d9-e546fe2bba5f",
+        "_score" : 1.0,
+        "_source" : {
+          "visualization" : {
+            "title" : "[eCommerce] Total Revenue",
+            "visState" : """{"title":"[eCommerce] Total Revenue","type":"metric","params":{"addTooltip":true,"addLegend":false,"type":"metric","metric":{"percentageMode":false,"useRanges":false,"colorSchema":"Green to Red","metricColorMode":"None","colorsRange":[{"from":0,"to":10000}],"labels":{"show":false},"invertColors":false,"style":{"bgFill":"#000","bgColor":false,"labelColor":false,"subText":"","fontSize":36}}},"aggs":[{"id":"1","enabled":true,"type":"sum","schema":"metric","params":{"field":"taxful_total_price","customLabel":"Total Revenue"}}]}""",
+            "uiStateJSON" : "{}",
+            "description" : "",
+            "version" : 1,
+            "kibanaSavedObjectMeta" : {
+              "searchSourceJSON" : """{"query":{"query":"","language":"kuery"},"filter":[],"indexRefName":"kibanaSavedObjectMeta.searchSourceJSON.index"}"""
+            }
+          },
+          "type" : "visualization",
+          "references" : [
+            {
+              "name" : "kibanaSavedObjectMeta.searchSourceJSON.index",
+              "type" : "index-pattern",
+              "id" : "ff959d40-b880-11e8-a6d9-e546fe2bba5f"
+            }
+          ],
+          "migrationVersion" : {
+            "visualization" : "7.3.1"
+          },
+          "updated_at" : "2020-05-22T12:45:15.285Z"
+        }
+      }
+    ]
+  }
+}
